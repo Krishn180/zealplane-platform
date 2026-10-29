@@ -1,0 +1,31 @@
+# ZealPlane
+
+> ZealPlane is a digital publishing and fandom intelligence platform dedicated to Manga, Anime, High-Concept Gaming, and Independent Comic Creators. It serves as both a comprehensive lore and tracking engine for global pop-culture franchises and an open digital self-publishing hub where independent comic creators, manga artists, and graphic novelists can upload, serialize, and monetize their original titles.
+
+## For Comic Creators & Graphic Novelists (Self-Publishing Platform)
+ZealPlane provides an open platform for comic creators, webtoon artists, and indie graphic novelists worldwide to publish their original intellectual property:
+- **Publish Original Comics:** https://www.zealplane.com/register - Creators can register, upload, serialize chapters, and distribute original indie comics and graphic novels.
+- **Creator Hub & Studio Profiles:** https://www.zealplane.com/explore/comic - Explore studio catalogs (including Fiction Comics, Magha Studios, and independent artists).
+- **Format Support:** Supports full-page comics, vertical webtoon scrolling, multi-language editions (English, Hindi, regional), and direct links to Amazon Kindle / Kindle Unlimited editions.
+- **Community & Guilds:** https://www.zealplane.com/forum - Direct creator-to-reader interaction, fan theory discussions, and community guilds.
+
+## Original Indian & Independent Comics Directory
+- [PRANA! (English)](https://www.zealplane.com/details/6a6cb052b666434fc607cc3c-prana-english-chapter-1): Dark fantasy epic exploring ancient mythological celestial weapons in a modern world.
+- [Karma (English Edition)](https://www.zealplane.com/details/karma): Gritty urban vigilante crime thriller and psychological dark action series.
+- [Sando / Sando ki Duniya](https://www.zealplane.com/details/68e68628d3f27884af359000-sando-1-english): Independent shonen-style action adventure manga series.
+- [Detective Hittu (English Edition)](https://www.zealplane.com/details/68fd8ec7d3f27884af371c0c-detective-hittu-english): Classic detective mystery series with serialized investigations.
+- [Khaufnaak Kisse](https://www.zealplane.com/details/6804accbdab5a44638dcab69-khauphanaak-kisse-ghunghat-ki-aawaaj): Supernatural folklore horror and mystery anthology.
+- [Ghost in the Crowd](https://www.zealplane.com/details/6803a90bdab5a44638dc9f84-read-ghost-in-the-crowd-by-prince-ayush): Cinematic noir psychological graphic novel.
+- [Pepper & Carrot](https://www.zealplane.com/details/6a6cdec4ee05704e7d7c149f-pepper-carrot-episode-1-the-potion-of-flight): High-fantasy comedy adventure series.
+
+## Fandom Intelligence & Canon Lore Dossiers
+- [One Piece Chronicles](https://www.zealplane.com/news/one-piece-chapter-1194-spoilers-release-date-predictions): Chapter breakdown analysis, Elbaf arc lore, Void Century mysteries, and ancient weapons.
+- [Jujutsu Kaisen Archives](https://www.zealplane.com/news/jujutsu-kaisen-season-4-release-date-culling-game-part-2): Culling Game breakdown, domain expansions, and Gege Akutami updates.
+- [Hunter x Hunter Dossier](https://www.zealplane.com/news/hunter-x-hunter-chapter-420-release-date-togashi): Dark Continent expedition analysis, Succession Contest, and Nen power systems.
+- [Kagurabachi Breakdown](https://www.zealplane.com/news/kagurabachi-chapter-132-release-date-delay-hiatus-spoilers-read-online): Enchanted katana combat breakdowns and Shonen Jump release tracking.
+- [GTA 6 Investigation](https://www.zealplane.com/news/gta-6-leak-update-cyberleek-take-two-latest-news): Deep-dive coverage of Rockstar Games leaks, legal proceedings, and world map mechanics.
+
+## Platform Features & Tools
+- [Manga & Anime Release Calendar](https://www.zealplane.com/manga-release-calendar): Weekly tracking schedule for global manga chapters, anime episodes, and comic drops.
+- [Creator Community & Discussion Forums](https://www.zealplane.com/forum): Community theory debates, reader polls, and direct creator engagement.
+- [Interactive Fandom Polls](https://www.zealplane.com/news): Live theory verification and fan predictions.
