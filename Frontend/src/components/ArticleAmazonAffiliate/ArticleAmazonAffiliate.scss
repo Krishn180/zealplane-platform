@@ -1,0 +1,230 @@
+.article-amazon-affiliate-card {
+  margin: 18px 0;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, rgba(20, 24, 38, 0.95) 0%, rgba(12, 15, 26, 0.98) 100%);
+  border: 1px solid rgba(255, 164, 28, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: rgba(255, 164, 28, 0.55);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .affiliate-body {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .affiliate-image-wrap {
+    flex-shrink: 0;
+    width: 54px;
+    height: 76px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    background: #090c14;
+
+    .affiliate-product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .discount-tag {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background: #cc0c39;
+      color: #ffffff;
+      font-size: 8.5px;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 3px;
+      line-height: 1.1;
+    }
+  }
+
+  .affiliate-info {
+    flex: 1;
+    min-width: 0;
+
+    .affiliate-top-micro {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 2px;
+      flex-wrap: wrap;
+
+      .amazon-trust-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(0, 168, 225, 0.12);
+        border: 1px solid rgba(0, 168, 225, 0.3);
+        padding: 1px 6px;
+        border-radius: 12px;
+
+        .amazon-prime-icon {
+          font-size: 9.5px;
+          font-weight: 800;
+          font-style: italic;
+          color: #00a8e1;
+        }
+
+        .pill-text {
+          font-size: 9.5px;
+          font-weight: 700;
+          color: #e2e8f0;
+          text-transform: uppercase;
+        }
+      }
+
+      .micro-cat {
+        font-size: 10px;
+        font-weight: 600;
+        color: #ff9900;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .micro-rating {
+        font-size: 10px;
+        font-weight: 600;
+        color: #ffa41c;
+      }
+    }
+
+    .affiliate-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 4px 0;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      a {
+        color: #f8fafc;
+        text-decoration: none;
+        transition: color 0.15s ease;
+
+        &:hover {
+          color: #ffb84d;
+        }
+      }
+    }
+
+    .affiliate-bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      .price-block {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        flex-wrap: wrap;
+
+        .deal-price {
+          font-size: 15px;
+          font-weight: 800;
+          color: #ffffff;
+        }
+
+        .mrp-price {
+          font-size: 11px;
+          color: #94a3b8;
+          text-decoration: line-through;
+        }
+
+        .delivery-micro {
+          font-size: 10px;
+          color: #94a3b8;
+          font-weight: 500;
+        }
+      }
+
+      .amazon-action-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: linear-gradient(180deg, #ffd814 0%, #f7ca00 100%);
+        border: 1px solid #fcd200;
+        border-radius: 6px;
+        padding: 5px 12px;
+        color: #0f1111;
+        font-size: 11.5px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+        flex-shrink: 0;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        transition: background 0.15s ease, transform 0.1s ease;
+
+        .cart-icon, .ext-icon {
+          color: #0f1111;
+        }
+
+        &:hover {
+          background: linear-gradient(180deg, #f7ca00 0%, #f0b800 100%);
+          border-color: #f2c200;
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+
+  .affiliate-disclaimer-note {
+    margin-top: 5px;
+    padding-top: 3px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 9px;
+    color: #64748b;
+    line-height: 1.2;
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    padding: 8px 10px;
+    margin: 14px 0;
+
+    .affiliate-body {
+      gap: 10px;
+    }
+
+    .affiliate-image-wrap {
+      width: 48px;
+      height: 68px;
+    }
+
+    .affiliate-info {
+      .affiliate-title {
+        font-size: 13px;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .affiliate-bottom-bar {
+        flex-wrap: wrap;
+        gap: 6px;
+
+        .amazon-action-btn {
+          padding: 4px 10px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

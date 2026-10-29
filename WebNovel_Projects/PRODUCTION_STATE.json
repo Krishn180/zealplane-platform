@@ -1,0 +1,100 @@
+{
+  "project": "ZealPlane Webtoon: Episode 1",
+  "series_arc": "Blood & Khaki (The Shadow of Anna)",
+  "visual_style": "2D Korean Webtoon Manhwa (Solo Leveling / Castle style, digital cel-shading, crisp ink outlines, zero 3D CGI)",
+  "production_rules": {
+    "zero_regeneration_rule": "Once an asset or character is approved, NEVER regenerate from scratch. Always reuse, composite, or inpaint existing locked artwork.",
+    "same_scene_continuation_rule": "Within the same scene (e.g. Scene 5), camera angle cuts MUST preserve exact vehicle geometry, rain density, headlight beams, and character costume DNA without re-inventing from scratch.",
+    "lettering_engine_lock": "All dialogue balloons MUST be rendered via lettering_engine.py with hardcoded font tokens (21px standard, 25px shout, Nirmala UI / Mangal, 2.8px border, 28px radius).",
+    "reading_layout_format": "Infinite Vertical Scroll Mode with dynamic 28px dark gutters, full-bleed smartphone readability, and zero artificial baked borders (standard Korean webtoon format).",
+    "immutable_negative_prompts_file": "NEGATIVE_PROMPTS.md",
+    "strict_negative_exclusions": [
+      "3d cgi, 3d render, unreal engine, octane render, digital doll face, porcelain skin, airbrushed skin, oily skin highlights, glossy plastic sheen, smooth gradient shading, wax figure",
+      "symmetrical composition, mirrored buildings, mirrored alley walls, symmetrical shopfronts, mirrored character poses, twin postures, tunnel vision, cloned architecture",
+      "korean text, hangul characters, hanja, japanese text, kanji, hiragana, katakana, chinese text, reversed english letters, mirrored typography, backwards text, floating neon clusters",
+      "seoul street, shinjuku alley, tokyo neon, cyberpunk city, east asian architecture, futuristic sci-fi city, western alleyway, clean modern sidewalks",
+      "duplicate bald characters, cloned face models, multiple cigarettes, floating cigarettes, cigarette in both hands, extra fingers, malformed hands, duplicate currency notes"
+    ]
+  },
+  "current_status": {
+    "current_scene": "Episode 4 Script Locked (28 Panels — The Delusion & The Tragic Awakening)",
+    "launch_batch_status": "Launch Trilogy (Episodes 1, 2, 3) Fully Produced (176 Locked Panels)",
+    "buffer_status": "Episode 4 Scripted (28 Panels) — Ready for Production",
+    "episode_1_panels": 118,
+    "episode_2_panels": 22,
+    "episode_3_panels": 36,
+    "episode_4_panels_planned": 28,
+    "total_locked_panels": 176,
+    "episode_4_script": "WebNovel_Projects/EPISODE_4_MANHWA_PRODUCTION_SCRIPT.md",
+    "episode_4_climax": "Panel 28: Rahul collapsing outside on 14 Old Barracks Road pavement crying 'बचाओ...!'; Gaurav's dead body inside",
+    "next_production_step": "Episode 4 Visual Production (Panels 1-28)"
+  },
+  "spatial_compass": {
+    "NORTH": "Police Checkpoint, yellow barricades, police jeeps with red/blue flashers, bridge pylons ahead",
+    "SOUTH": "Anna's Convoy (Black luxury sedan in front, Cargo Truck 1 15m behind, Cargo Truck 2 30m behind)",
+    "WEST": "Bridge steel railing, driver-side car door, stormy ocean below, courier exit side",
+    "EAST": "Opposite road lane, passenger-side car door, central bridge divider"
+  },
+  "character_dna_locks": {
+    "tapori_courier": {
+      "name": "Tapori Courier (Escort Driver)",
+      "age": 28,
+      "attire": {
+        "shirt": "Vibrant turquoise/cyan Hawaiian short-sleeve shirt with large pink/magenta hibiscus flowers, worn unbuttoned and flapping in wind",
+        "undershirt": "Fitted white ribbed tank top (banyan)",
+        "neckwear": "Knotted crimson red bandana / neck-scarf around neck",
+        "bottom": "Distressed washed blue denim jeans with tear at knees",
+        "footwear": "Brown leather loafers on wet asphalt",
+        "jewelry": "Single small gold hoop earring in left ear"
+      },
+      "physical": "Messy wavy wet black hair, sharp jawline, light facial stubble, fearless confident street smirk",
+      "master_file": "webnovel_assets/characters/tapori_driver_master_sheet.jpg"
+    },
+    "officer_raunak": {
+      "name": "Sub-Inspector Raunak",
+      "age": 25,
+      "attire": {
+        "uniform": "Dark khaki Indian police uniform, shoulder epaulettes with stars, Sam Browne dark leather duty belt and holster",
+        "headwear": "Police peaked service cap with brass insignia, dripping rain from brim",
+        "outerwear": "Dark charcoal/black waterproof tactical police raincoat worn open or zipped depending on stance"
+      },
+      "physical": "Athletic disciplined build, sharp square jaw, clean police side-taper cut, burning fierce eyes of righteous defiance",
+      "master_file": "webnovel_assets/characters/raunak_sub_inspector_master_sheet.jpg"
+    },
+    "dynamite_anna": {
+      "name": "Dynamite Anna (Present / Elderly)",
+      "attire": "Immaculate white khadi kurta, round silver-rimmed spectacles",
+      "physical": "Slicked hair, cold calculating eyes, heavy chiaroscuro shadow",
+      "master_file": "webnovel_assets/characters/dynamite_anna_master_sheet.jpg"
+    },
+    "young_dynamite_anna": {
+      "name": "Young Dynamite Anna (Flashback / Age 36)",
+      "attire": {
+        "shirt": "Cream/white raw-silk button-down shirt, open collar, sleeves rolled up to forearms",
+        "bottom": "Charcoal/dark grey tailored trousers with leather belt",
+        "footwear": "Polished black dress shoes",
+        "jewelry": "Solid-gold Swiss watch with jubilee bracelet on right wrist, solid-gold signet ring on pinky, heavy gold chain necklace"
+      },
+      "physical": "Muscular imposing build, broad hairy chest, thick curved black mustache, slicked-back dark wavy hair, dark round sunglasses reflecting neon/police flashers",
+      "master_file": "webnovel_assets/characters/young_dynamite_anna_master_sheet.jpg"
+    }
+  },
+  "lighting_and_atmosphere": {
+    "weather": "Violent monsoon rain with heavy diagonal rain streaks and water splash off metal surfaces",
+    "key_light_1": "Blinding white xenon beams from black sedan shooting South to North",
+    "key_light_2": "Pulsing red and blue emergency police strobes scattering on wet reflective asphalt",
+    "ambient": "Dark midnight navy blue and charcoal wet tarmac"
+  },
+  "lettering_tokens": {
+    "font_family_comic": "'Kalam', cursive, sans-serif",
+    "font_family_clean": "'Nirmala UI', 'Mangal', sans-serif",
+    "font_file_kalam": "webnovel_assets/fonts/Kalam-Bold.ttf",
+    "font_size_normal": 22,
+    "font_size_shout": 25,
+    "border_width": 2.8,
+    "border_color": "#151515",
+    "bg_color": "#ffffff",
+    "border_radius": 28,
+    "line_height": 1.35
+  }
+}

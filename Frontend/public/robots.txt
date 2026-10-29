@@ -1,0 +1,47 @@
+User-agent: Mediapartners-Google
+Disallow: /viewer/
+Disallow: /details/
+Disallow: /forum/
+Disallow: /forum
+Disallow: /post/
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /payment-dashboard
+Disallow: /settings
+Disallow: /my-library
+Disallow: /checkout/
+Disallow: /news/-
+Disallow: /news/prana-the-indian-indie-manga-that-is-quietly-building-something-special
+Noindex: /news/prana-the-indian-indie-manga-that-is-quietly-building-something-special
+Disallow: /news/jeff-the-land-shark-mcu-s-next-adorable-star-after-baby-groot-
+Disallow: /news/swapnil-comics-the-creator-keeping-the-spirit-of-classic-hindi-comics-alive
+Noindex: /news/swapnil-comics-the-creator-keeping-the-spirit-of-classic-hindi-comics-alive
+Disallow: /news/the-complete-guide-to-reading-indie-comics-on-zealplane-in-2026
+Disallow: /news/pepper-and-carrot-why-this-open-source-webcomic-has-a-passionate-global-following
+Noindex: /news/pepper-and-carrot-why-this-open-source-webcomic-has-a-passionate-global-following
+Allow: /
+Allow: /news/
+
+User-agent: *
+Disallow: /viewer/
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /payment-dashboard
+Disallow: /settings
+Disallow: /my-library
+Disallow: /checkout/
+Disallow: /news/-
+Disallow: /news/prana-the-indian-indie-manga-that-is-quietly-building-something-special
+Noindex: /news/prana-the-indian-indie-manga-that-is-quietly-building-something-special
+Disallow: /news/swapnil-comics-the-creator-keeping-the-spirit-of-classic-hindi-comics-alive
+Noindex: /news/swapnil-comics-the-creator-keeping-the-spirit-of-classic-hindi-comics-alive
+Disallow: /news/pepper-and-carrot-why-this-open-source-webcomic-has-a-passionate-global-following
+Noindex: /news/pepper-and-carrot-why-this-open-source-webcomic-has-a-passionate-global-following
+Allow: /
+
+Sitemap: https://www.zealplane.com/sitemap.xml
+Sitemap: https://www.zealplane.com/sitemap-news.xml
+
+# LLM & AI Generative Engine Map
+# https://llmstxt.org/
+# https://www.zealplane.com/llms.txt

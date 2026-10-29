@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+.loadingSpinner {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c; // dark comic-like backdrop
+    color: #fff;
+
+    .comicText {
+        font-family: 'Comic Neue', cursive;
+        font-size: 2rem;
+        color: #f9d71c; // comic yellow
+        margin-bottom: 20px;
+        text-shadow: 2px 2px #ff4136; // red shadow
+        animation: pop 1s infinite alternate;
+    }
+
+    .spinner {
+        animation: rotate 1s linear infinite;
+        width: 60px;
+        height: 60px;
+
+        .path {
+            stroke: #f012be; // comic pink
+            stroke-linecap: round;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+    }
+
+    &.initial {
+        height: 700px;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 150;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -35;
+        }
+        100% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -124;
+        }
+    }
+
+    @keyframes pop {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.1);
+        }
+    }
+}

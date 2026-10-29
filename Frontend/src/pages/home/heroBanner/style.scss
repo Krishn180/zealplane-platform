@@ -1,0 +1,845 @@
+@import "../../../mixins.scss";
+
+$netflix-red: #e50914; // Darker red for buttons
+$netflix-gray: #ddd; // Lighter gray for text
+$netflix-font-family: "Helvetica Neue", sans-serif; // Consistent font
+
+// ------------------------------------------- new herobanner css -------------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sunflower:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.swiper-slider-container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.theater-swiper {
+  width: 100% !important;
+  padding: 60px 0px !important;
+  height: 100% !important;
+  margin-top: 40px;
+}
+
+.swiper-slide {
+  position: relative;
+  // width: 800px;
+  // height: 650px;
+  background: #fff;
+  box-shadow: 1px 22px 44px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s !important;
+  user-select: none;
+  text-align: left !important;
+}
+.swiper-slide-active {
+  width: 600px;
+  transition: width 1s ease-in-out !important;
+  border: 1px solid #fff !important;
+}
+
+.slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  transform: scale(1.1);
+}
+
+.slide-img {
+  position: relative;
+  width: 90%;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  z-index: 1;
+  margin: auto;
+  display: block;
+}
+
+.title-slider h1 {
+  font-size: 1.9rem;
+  font-family: "Sunflower", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  opacity: 1;
+  transition: none;
+  margin-bottom: 0;
+}
+
+.title-slider {
+  /* position: absolute; */
+
+  padding: 10px 2px 10px;
+}
+.swiper-slide img {
+  background-color: none;
+}
+.content-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0.5) 20%,
+    transparent 35%
+  );
+
+  color: #fff;
+  z-index: 1;
+  opacity: 1;
+}
+
+.swiper-slide-active .content {
+  opacity: 1;
+  transition: none;
+}
+
+.description-slider {
+  border-left: 4px solid red;
+  padding-left: 10px;
+  // margin-bottom: 8px;
+  opacity: 1;
+}
+
+.swiper-slide-active .description-slider {
+  opacity: 1;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
+.description-slider {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transform: none;
+  font-family: "Poppins", sans-serif;
+  opacity: 1;
+}
+
+.swiper-slide-active .description-slider p {
+  transform: none;
+  opacity: 1;
+  transition: none;
+}
+
+.theater-swiper .swiper-pagination-bullet {
+  width: 46px !important;
+  height: 16px !important;
+  background-color: #fff !important;
+  /* border-radius: 50%; */
+  border-radius: 14px !important;
+}
+
+.theater-swiper .swiper-pagination-bullet-active {
+  width: 48px !important;
+  border-radius: 14px !important;
+  background-color: red !important;
+  transition: all 0.8s ease-in-out !important;
+}
+// .swiper-pagination-bullet:nth-child(n + 11) {
+//   display: none !important;
+// }
+
+.read {
+  // position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  padding: 8px 14px;
+  color: #fff;
+  background-color: red;
+  font-size: 0.8rem;
+  width: auto;
+  display: flex;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+.read:hover {
+  background-color: rgb(186, 12, 12);
+}
+
+.slide-wrapper-top {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: black;
+  color: white;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  justify-content: center;
+  font-size: 29px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.custom-swiper-button-prev {
+  left: -70px;
+}
+
+.custom-swiper-button-next {
+  right: -70px;
+}
+
+.avtar-username {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  gap: 1rem;
+}
+
+.avtar-photo {
+  display: flex;
+  align-items: center; // 🔥 prevents stretch
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.avatar {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px;
+  min-height: 36px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+
+  display: block; // VERY IMPORTANT
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Ensure child elements do not break flex layout */
+.icon-wrapper,
+.read-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Like icon */
+.icon-wrapper.like,
+.icon-wrapper.share {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effects */
+.icon-wrapper.like:hover .heart-icon {
+  color: red !important;
+  transform: scale(1.1);
+}
+
+.icon-wrapper.like:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.icon-wrapper.share:hover {
+  background: rgba(0, 0, 255, 0.3);
+  color: blue;
+}
+
+.icons svg {
+  font-size: 23px;
+}
+
+/* Like count */
+.likeCount {
+  font-size: 14px;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .swiper-slide {
+    width: 700px;
+    height: 600px;
+  }
+
+  .custom-swiper-button-prev {
+    left: 50px;
+  }
+
+  .custom-swiper-button-next {
+    right: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .swiper-slide {
+    width: 600px;
+    height: 500px;
+  }
+
+  .slide-img {
+    max-height: 60vh;
+  }
+
+  .description-slider {
+    font-size: 0.7rem;
+  }
+
+  .title-slider h1 {
+    font-size: 1.5rem;
+  }
+
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .custom-swiper-button-prev {
+    left: 30px;
+  }
+
+  .custom-swiper-button-next {
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slider-container {
+    width: 95%;
+  }
+  .slide-wrapper {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    height: 450px;
+  }
+
+  .slide-img {
+    max-height: 100vh;
+  }
+
+  .description-slider p {
+    font-size: 0.9rem;
+  }
+  .description-slider {
+    font-size: 0.9rem;
+  }
+  .theater-swiper {
+    padding: 40px 0px !important;
+  }
+  .title-slider h1 {
+    font-size: 1.3rem;
+  }
+
+  .read {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .custom-swiper-button-prev,
+  .custom-swiper-button-next {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .custom-swiper-button-prev {
+    left: 0px;
+  }
+
+  .custom-swiper-button-next {
+    right: 0px;
+  }
+
+  .avtar-photo .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+  .avtar-username {
+    margin-top: 0;
+  }
+  .content-slider {
+    padding: 7px;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 10%,
+      rgba(0, 0, 0, 0.5) 20%,
+      transparent 37%
+    );
+  }
+
+  .theater-swiper .swiper-pagination-bullet {
+    width: 22px !important;
+    height: 10px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 22px !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .slide-wrapper-top {
+    height: 580px;
+  }
+}
+
+// fodder.jsx css --------------------------------------------------------
+
+.backdrop-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  overflow: hidden;
+
+  .lazy-load-image-background {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: blur(15px); // Add blur effect
+    }
+  }
+
+  // Adding the opacity layer at the bottom
+  .bottom-opacity-layer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  }
+}
+
+.opacity-layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.iconSidebar {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    .icon {
+      font-size: 24px;
+      color: #fff;
+      transition: transform 0.3s ease; // Add transition for smooth rotation
+    }
+
+    span {
+      color: #fff;
+      font-size: 0; // Start with font-size 0
+      opacity: 0; // Start with opacity 0
+      transition: opacity 0.3s ease, font-size 0.3s ease, margin-left 0.3s ease;
+      margin-left: 0; // Start with no margin
+    }
+
+    &:hover {
+      background: rgba(255, 2, 2, 0.9);
+      transform: translateX(15px);
+
+      .icon {
+        animation: rotate 0.3s ease; // Trigger rotation animation
+      }
+
+      span {
+        opacity: 1; // Make text visible
+        font-size: 14px; // Set text to its intended size
+        margin-left: 10px; // Optional: adds a sliding effect
+      }
+    }
+  }
+}
+
+// Define keyframes for the rotation animation
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heroBannerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Align content to the left
+  justify-content: flex-end; // Align content to the bottom
+  padding: 20px;
+  text-align: left;
+  position: absolute; // Changed from relative to absolute
+  bottom: 20px; // Position from the bottom
+  left: 20px; // Position from the left
+  max-width: 600px; // Reduced width to fit better with overlay
+  z-index: 2;
+
+  .Title {
+    font-size: 1.5rem; // Reduced size
+    font-weight: bold;
+    color: white;
+    @include md {
+      font-size: 2.5rem; // Adjusted for larger screens
+    }
+  }
+
+  .description {
+    margin-bottom: 20px;
+    color: $netflix-gray;
+    font-family: $netflix-font-family;
+    font-size: 1rem; // Reduced size
+    font-weight: bold;
+    @include md {
+      font-size: 1.2rem; // Adjusted for larger screens
+    }
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 10px; // Reduced gap
+    margin: 10px 0;
+
+    .likeButton,
+    .enquireButton {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px; // Reduced padding
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-family: $netflix-font-family;
+      font-size: 1rem; // Reduced size
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      svg {
+        margin-right: 5px;
+        fill: white;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+}
+
+// skeleton css ------------------------------------------------------------------------------------------------
+/* NAVBAR GAP */
+/* NAVBAR GAP */
+.hero-skeleton-container {
+  margin-top: 130px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO BOX – taller and wider */
+.hero-skeleton {
+  width: 80%;
+  height: 580px; /* increased height */
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  background: #3e3e3e; /* medium-light gray base */
+}
+
+/* LIGHT SHIMMER */
+.hero-skeleton-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #555555; /* medium-gray base */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-skeleton-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%; /* start off-screen */
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    /* transparent start */ rgba(136, 135, 135, 0.4) 50%,
+    /* subtle shine in middle */ rgba(255, 255, 255, 0) 100%
+      /* transparent end */
+  );
+  transform: skewX(-25deg); /* gives that angled shine effect */
+  animation: shine 1s infinite;
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Text content blocks */
+.hero-skeleton-content {
+  position: absolute;
+  bottom: 35px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-skeleton-title,
+.hero-skeleton-desc,
+.hero-skeleton-user {
+  background: #5c5b5b; /* medium gray blocks */
+  border-radius: 6px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.hero-skeleton-title {
+  width: 360px;
+  height: 30px;
+}
+
+.hero-skeleton-desc {
+  width: 260px;
+  height: 20px;
+}
+
+.hero-skeleton-user {
+  width: 200px;
+  height: 18px;
+}
+
+/* PAGINATION DOTS */
+.hero-pagination-skeleton {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-pagination-skeleton .dot {
+  width: 12px;
+  height: 12px;
+  background: #5f5e5e;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.hero-pagination-skeleton .dot.active {
+  width: 32px;
+  border-radius: 20px;
+  opacity: 0.85;
+}
+
+/* PAGINATION BAR UNDER DOTS */
+.hero-pagination-bar {
+  width: 160px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #b0b0b0;
+  overflow: hidden;
+}
+
+.hero-pagination-progress {
+  width: 45px;
+  height: 100%;
+  background: #c1c1c1;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 10px;
+}
+
+/* SHIMMER EFFECT */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+/* ===================== Hero Tabs ===================== */
+.hero-tabs {
+  display: flex;
+  justify-content: center; /* center the tabs */
+  gap: 15px; /* space between buttons */
+  margin-top: 20px; /* space from slider */
+  margin-bottom: 30px; /* space below tabs if needed */
+
+  button {
+    background-color: transparent;
+    border: 2px solid #ccc; /* subtle border */
+    border-radius: 25px; /* rounded pill shape */
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #555;
+
+    &:hover {
+      background-color: #f0f0f0;
+      border-color: #999;
+    }
+
+    &.active {
+      background-color: #ff2d55; /* pinkish active color */
+      color: #fff;
+      border-color: #ff2d55;
+    }
+  }
+}
+
+/* Optional: make it responsive */
+@media (max-width: 768px) {
+  .hero-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+
+    button {
+      flex: 1 1 calc(33% - 10px);
+      font-size: 13px;
+      padding: 6px 10px;
+    }
+  }
+}
+
+.new-release-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background: linear-gradient(135deg, #ff4500 0%, #ff007f 100%);
+  color: white;
+  padding: 6px 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: pulse-new-release 2s infinite;
+
+  @keyframes pulse-new-release {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 0, 127, 0.9);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+    }
+  }
+}

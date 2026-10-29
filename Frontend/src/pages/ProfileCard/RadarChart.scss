@@ -1,0 +1,12 @@
+.radar-chart-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #0d0d0d;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 0 60px rgba(255, 0, 0, 0.4); // red glow
+  canvas {
+    background-color: transparent !important;
+  }
+}

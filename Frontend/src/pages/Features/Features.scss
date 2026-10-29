@@ -1,0 +1,314 @@
+.features-page-root {
+  background: #08090f;
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Hero ── */
+  .features-hero {
+    padding: 130px 0 70px 0;
+    text-align: center;
+    background: radial-gradient(circle at 50% 20%, rgba(244, 117, 33, 0.08) 0%, transparent 60%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    .features-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .features-title {
+      font-size: 42px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.8px;
+      max-width: 850px;
+      margin: 0 auto 18px auto;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+    .features-subtitle {
+      font-size: 17px;
+      color: #94a3b8;
+      line-height: 1.65;
+      max-width: 760px;
+      margin: 0 auto 32px auto;
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+
+    .features-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .features-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #f47521 0%, #ff8e35 100%);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(244, 117, 33, 0.35);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+      color: #ffffff;
+    }
+  }
+
+  .features-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+    }
+  }
+
+  /* ── Grid Section ── */
+  .features-grid-section {
+    padding: 80px 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-card {
+    background: rgba(18, 20, 32, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(244, 117, 33, 0.4);
+    }
+
+    .feature-icon-wrapper {
+      margin-bottom: 18px;
+    }
+
+    .feature-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: #f47521;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+
+    .feature-heading {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .feature-text {
+      font-size: 14.5px;
+      color: #94a3b8;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .feature-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      flex-grow: 1;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13.5px;
+        color: #cbd5e1;
+        line-height: 1.5;
+        margin-bottom: 12px;
+
+        .feature-check {
+          color: #10b981;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    .feature-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #f47521;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: auto;
+      transition: gap 0.2s ease;
+
+      &:hover {
+        gap: 10px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* ── Workflow Card ── */
+  .creator-workflow-section {
+    padding: 0 0 80px 0;
+
+    .workflow-card {
+      background: linear-gradient(135deg, rgba(244, 117, 33, 0.05) 0%, rgba(18, 20, 32, 0.8) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 48px 40px;
+
+      @media (max-width: 768px) {
+        padding: 32px 20px;
+      }
+    }
+
+    .workflow-tag {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f47521;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 36px;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    .workflow-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+
+      @media (max-width: 850px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .step-num {
+        font-size: 32px;
+        font-weight: 900;
+        color: rgba(244, 117, 33, 0.6);
+        line-height: 1;
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+      }
+
+      p {
+        font-size: 14px;
+        color: #94a3b8;
+        line-height: 1.6;
+        margin: 0;
+      }
+    }
+  }
+
+  /* ── CTA Strip ── */
+  .features-cta-strip {
+    background: #0d0f18;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 70px 0;
+    text-align: center;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 12px;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+}

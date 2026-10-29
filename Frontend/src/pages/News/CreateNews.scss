@@ -1,0 +1,89 @@
+.create-news-container {
+  max-width: 700px;
+  margin: 120px auto 40px; // space below header
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+  h2 {
+    text-align: center;
+    color: #ff4b4b;
+    font-family: "Bangers", cursive;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      color: white;
+      font-size: 14px;
+      transition: border 0.3s;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #ff4b4b;
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background: #ff4b4b;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #e63b3b;
+      }
+    }
+  }
+}
+
+.quill {
+  width: 100%; /* Ensures the editor takes full width of the parent container */
+  min-height: 150px; /* Sets a minimum height for the editor */
+  border: 1px solid #343536; /* Keeps a consistent border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #272729; /* Consistent background */
+  color: #d7dadc; /* Text color */
+}
+
+.quill .ql-container {
+  border: none; /* Removes inner container border */
+  font-size: 14px; /* Ensures consistent font size */
+}
+
+.quill .ql-editor {
+  min-height: 150px; /* Ensures the editor area has sufficient height */
+  padding: 10px; /* Adds padding inside the editor area */
+}
+
+.quill:focus {
+  outline: none; /* Removes outline when the editor is focused */
+}
+/* Add this CSS to your .quill class */
+.quill .ql-editor::before {
+  color: #818384 !important;
+}

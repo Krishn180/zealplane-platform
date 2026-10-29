@@ -1,0 +1,10 @@
+# Node dependencies
+node_modules/
+dist/
+dist-ssr/
+build/
+.cache/
+.env*
+*.env
+*.py
+*.log

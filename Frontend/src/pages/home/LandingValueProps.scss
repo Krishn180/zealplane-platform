@@ -1,0 +1,232 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LandingValueProps.scss — dual-column reader/creator value propositions
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.lvp-root {
+  position: relative;
+  padding: 80px 24px;
+  background: #0a0a12;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── header ────────────────────────────────────────────────────────────────── */
+.lvp-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.lvp-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.3px;
+}
+
+.lvp-subtitle {
+  font-size: 1rem;
+  color: #8c8cba;
+  margin: 0;
+}
+
+/* ── columns layout ────────────────────────────────────────────────────────── */
+.lvp-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lvp-col {
+  flex: 1;
+  padding: 36px 32px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── column badges ─────────────────────────────────────────────────────────── */
+.lvp-col-badge {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  color: #4fc3f7;
+  background: rgba(79, 195, 247, 0.1);
+  border: 1px solid rgba(79, 195, 247, 0.2);
+}
+
+.lvp-col-badge-creator {
+  color: #ff6600;
+  background: rgba(255, 102, 0, 0.1);
+  border-color: rgba(255, 102, 0, 0.25);
+}
+
+/* ── features ──────────────────────────────────────────────────────────────── */
+.lvp-features {
+  width: 100%;
+}
+
+.lvp-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+
+  /* scroll-triggered entrance */
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  .lvp-col-creator & {
+    transform: translateX(20px);
+  }
+
+  .lvp-visible & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.lvp-feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.lvp-feature-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.lvp-feature-desc {
+  font-size: 0.82rem;
+  color: #9999b3;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── CTA buttons ───────────────────────────────────────────────────────────── */
+.lvp-cta {
+  margin-top: 28px;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: none;
+  font-family: 'Inter', sans-serif;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.lvp-cta-reader {
+  background: rgba(79, 195, 247, 0.12);
+  color: #4fc3f7;
+  border: 1px solid rgba(79, 195, 247, 0.3);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(79, 195, 247, 0.2);
+  }
+}
+
+.lvp-cta-creator {
+  background: linear-gradient(135deg, #ff6600, #ff3c00);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+
+  &:hover {
+    box-shadow: 0 8px 30px rgba(255, 102, 0, 0.45);
+  }
+}
+
+/* ── divider ───────────────────────────────────────────────────────────────── */
+.lvp-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  align-self: stretch;
+}
+
+.lvp-divider-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(255, 102, 0, 0.3), transparent);
+}
+
+.lvp-divider-logo {
+  font-size: 1.5rem;
+  padding: 12px 0;
+  animation: lvp-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes lvp-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.2); }
+}
+
+/* ══════════════ RESPONSIVE ══════════════ */
+
+@media (max-width: 768px) {
+  .lvp-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lvp-divider {
+    flex-direction: row;
+    padding: 10px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .lvp-divider-line {
+    height: 2px;
+    width: auto;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.3), transparent);
+  }
+
+  .lvp-divider-logo {
+    padding: 0 16px;
+  }
+
+  .lvp-col {
+    padding: 28px 20px;
+  }
+
+  .lvp-feature {
+    transform: translateY(15px) !important;
+
+    .lvp-visible & {
+      transform: translateY(0) !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .lvp-root { padding: 50px 16px; }
+  .lvp-title { font-size: 1.5rem; }
+  .lvp-subtitle { font-size: 0.88rem; }
+}

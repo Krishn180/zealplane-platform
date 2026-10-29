@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&family=Outfit:wght@400;600;800&display=swap");
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  background-color: #07070b;
+}
+
+.homePage {
+  background-color: #07070b;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+
+  /* Ambient cinematic lights */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255, 79, 0, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+.carouselSection {
+  position: relative;
+  margin: 40px;
+  z-index: 2;
+
+  & > .contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 12px;
+  }
+
+  .carouselTitle {
+    font-size: 26px;
+    color: white;
+    font-weight: 800;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: -0.5px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: #ff4f00;
+      border-radius: 2px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselSection {
+    margin: 20px 15px;
+  }
+
+  .carouselSection .carouselTitle {
+    font-size: 20px;
+  }
+}
+
+.homePage::-webkit-scrollbar {
+  width: 8px;
+}
+
+.homePage::-webkit-scrollbar-thumb {
+  background: #ff4f00;
+  border-radius: 4px;
+}
+
+.homePage::-webkit-scrollbar-track {
+  background: #0c0c14;
+}

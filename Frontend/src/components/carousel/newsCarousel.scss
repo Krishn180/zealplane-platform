@@ -1,0 +1,281 @@
+.newsCarouselSection {
+  margin-bottom: 50px;
+  position: relative;
+
+  .carouselHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .carouselTitleGroup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      .carouselTitle {
+        font-size: 24px;
+        color: white;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+
+      .liveUpdateBadge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        color: #34d399;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 9px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        .liveDot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #10b981;
+          box-shadow: 0 0 6px #10b981;
+        }
+      }
+    }
+
+    .carouselNavBtns {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      .arrow {
+        font-size: 26px;
+        color: #94a3b8;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #38bdf8;
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+
+  .newsCarouselItems {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 16px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* Hide scrollbar */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .newsCarouselCard {
+    flex: 0 0 280px;
+    background: #0b0f19;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+
+    &:hover {
+      border-color: #38bdf8;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+      .newsCardCoverBlock img {
+        transform: scale(1.05);
+      }
+      .newsCardTitle {
+        color: #38bdf8;
+      }
+    }
+
+    .newsCardLink {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .newsCardCoverBlock {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+        transition: transform 0.35s ease;
+      }
+
+      .newsNewReleaseBadge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 10px rgba(239, 68, 68, 0.5);
+        z-index: 2;
+        animation: pulseBadge 2s infinite ease-in-out;
+      }
+
+      .newsDateTag {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #cbd5e1;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 4px;
+        backdrop-filter: blur(4px);
+        z-index: 2;
+      }
+    }
+
+    .newsCardMeta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px 4px;
+
+      .authorLine {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .authorAvatar {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+          color: #fff;
+          font-size: 11px;
+          font-weight: 800;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .authorName {
+          font-size: 12px;
+          font-weight: 600;
+          color: #94a3b8;
+        }
+      }
+
+      .readTime {
+        font-size: 11px;
+        color: #38bdf8;
+        font-weight: 600;
+      }
+    }
+
+    .newsCardTitleBlock {
+      padding: 0 14px 14px;
+
+      .newsCardTitle {
+        font-size: 14px;
+        font-weight: 750;
+        color: #f1f5f9;
+        line-height: 1.4;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: color 0.2s ease;
+      }
+    }
+  }
+
+  .newsLoadingSkeleton {
+    display: flex;
+    gap: 20px;
+
+    .newsSkeletonCard {
+      flex: 0 0 280px;
+      height: 260px;
+      background: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .skeletonCover {
+        width: 100%;
+        height: 160px;
+        border-radius: 8px;
+        background: #1e293b;
+      }
+      .skeletonMeta {
+        width: 60%;
+        height: 14px;
+        border-radius: 4px;
+        background: #1e293b;
+      }
+      .skeletonTitle {
+        width: 90%;
+        height: 18px;
+        border-radius: 4px;
+        background: #1e293b;
+      }
+    }
+  }
+}
+
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .newsCarouselSection {
+    .newsCarouselCard {
+      flex: 0 0 240px;
+
+      .newsCardCoverBlock {
+        height: 150px;
+      }
+      .newsCardTitleBlock .newsCardTitle {
+        font-size: 13px;
+      }
+    }
+  }
+}

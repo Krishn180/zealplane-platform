@@ -1,0 +1,206 @@
+{
+  "series_title": "The Panopticon: Dynamite City",
+  "series_title_hindi": "पैनोप्टिकॉन: बारूद का साया",
+  "version": "1.1",
+  "visual_style_lock": "authentic Korean webtoon manhwa anime art style, Solo Leveling and Lookism visual aesthetic, sharp stylized anime linework, clean crisp cel-shaded coloring, sharp expressive anime facial features, anime eye rendering, stylized textured hair spikes, high-contrast dynamic anime lighting, pure Korean digital manhwa format, strictly NO western comic book style, strictly NO 3D CGI or realistic rendering",
+  "characters": [
+    {
+      "character_id": "rahul",
+      "name": "Rahul",
+      "age": 21,
+      "archetype": "Underdog Survivor / Former Syndicate Courier",
+      "physical_anchors": {
+        "hair": "Messy unkempt jet-black hair with loose bangs falling across forehead",
+        "eyes": "Deep dark sunken brown eyes with noticeable fatigue circles, intense emotional weight, quietly defiant",
+        "facial_features": "Lean hollow cheekbones, subtle light stubble, handsome refined bone structure masked by hunger",
+        "physique": "Tall, lean and gaunt frame, slightly visible collarbones, agile driver's build"
+      },
+      "attire": {
+        "outerwear": "Worn olive-drab field utility jacket with rolled-up cuffs, faded patches",
+        "inner": "Charcoal grey crewneck t-shirt with a worn collar",
+        "bottoms": "Slim-fit dark distressed denim jeans with slight fraying at knees",
+        "footwear": "Beige/brown scuffed high-top canvas sneakers",
+        "relic_accessory": "Vintage mechanical steel wristwatch with a hairline-cracked crystal glass dial on left wrist"
+      },
+      "master_sheet_path": "webnovel_assets/characters/rahul_master_sheet.jpg"
+    },
+    {
+      "character_id": "dynamite_anna",
+      "name": "Neelkanth Sethupathi (Dynamite Anna)",
+      "age": 52,
+      "archetype": "Ruthless Syndicate Kingpin / The Pablo Escobar of South Coast",
+      "physical_anchors": {
+        "hair": "Salt-and-pepper slicked-back hair with shaved temples",
+        "facial_features": "Thick curved black handlebar mustache, wide heavy jawline, intimidating ruthless grin",
+        "eyes": "Concealed behind dark round vintage sunglasses even indoors",
+        "physique": "Heavyset imposing frame with prominent potbelly, broad muscular shoulders"
+      },
+      "attire": {
+        "primary": "Half-unbuttoned cream raw-silk half-sleeve shirt revealing a solid gold chain on chest",
+        "bottoms": "Traditional crisp white South Indian dhoti (veshti) with subtle golden zari border",
+        "accessories": "Heavy gold sovereign ring, gold luxury watch, expensive Cohiba cigar with swirling grey smoke"
+      },
+      "master_sheet_path": "webnovel_assets/characters/dynamite_anna_master_sheet.jpg"
+    },
+    {
+      "character_id": "brother_inspector",
+      "name": "Elder Brother (Ex-NCDF Inspector)",
+      "age": 29,
+      "archetype": "Decorated Upright Ex-Police Inspector / Moral Anchor",
+      "physical_anchors": {
+        "hair": "Short military side-fade haircut",
+        "facial_features": "Square determined jawline, honest warm brown eyes, resilient older-brother smile",
+        "physique": "Athletic, muscular, tall frame"
+      },
+      "states": {
+        "prime_officer": {
+          "attire": "Decorated dark navy-blue Indian Special Police Force (NCDF) tactical uniform with ribbons and stars"
+        },
+        "current_hospitalized": {
+          "attire": "Hospital striped gown, head wrapped in white gauze bandages, right arm in a medical sling, resting in hospital bed"
+        }
+      },
+      "master_sheet_path": "webnovel_assets/characters/brother_inspector_master_sheet.jpg"
+    },
+    {
+      "character_id": "jaleel",
+      "name": "Jaleel",
+      "age": 32,
+      "archetype": "Anna's Ruthless Lieutenant / Gunman Enforcer",
+      "physical_anchors": {
+        "hair": "Sleek greasy undercut hairstyle parted to the side",
+        "facial_features": "Predatory sharp brown eyes, cruel mocking sneer, thin razor scar cutting across left cheekbone, thin mustache",
+        "physique": "Wiry, agile, muscular athletic build"
+      },
+      "attire": {
+        "primary": "Burgundy patterned retro silk button-up shirt unbuttoned at top, sleeves rolled up",
+        "bottoms": "Tailored black trousers with a leather belt and polished pointed dress shoes",
+        "weapon": "Black leather shoulder holster housing a 9mm semi-automatic pistol"
+      },
+      "master_sheet_path": "webnovel_assets/characters/jaleel_master_sheet.jpg"
+    },
+    {
+      "character_id": "raunak",
+      "name": "Officer Raunak (Sub-Inspector)",
+      "age": 25,
+      "archetype": "Fearless Young Martyr Cop of the Bridge Standoff",
+      "physical_anchors": {
+        "hair": "Clean short police side-taper haircut",
+        "facial_features": "Sharp square jaw, burning fierce eyes of righteous defiance",
+        "physique": "Athletic, tall, disciplined frame"
+      },
+      "attire": {
+        "primary": "Crisp dark-khaki Indian state police uniform with shoulder stars, Sam Browne leather belt, rain-dampened",
+        "weapon": "Standard police service revolver held in two-handed combat stance",
+        "personal_relic": "Leather badge wallet carrying photo of wife Sanjana and schoolboy son"
+      },
+      "master_sheet_path": "webnovel_assets/characters/raunak_sub_inspector_master_sheet.jpg"
+    },
+    {
+      "character_id": "gaurav",
+      "name": "Gaurav (गौरव)",
+      "age": 17,
+      "archetype": "Crucial Mystery Key / Superstar Idol Visuals",
+      "physical_anchors": {
+        "hair": "Voluminous soft messy curly dark hair falling over forehead",
+        "facial_features": "Exceptionally handsome K-pop idol / Korean superstar facial structure, delicate jawline, large expressive dark eyes",
+        "physique": "Slender, stylish, youthful build"
+      },
+      "states": {
+        "story_victim_state": "Slight cheek bandage, scuffed oversized pastel hoodie, messy disheveled curls, beaten in alley by thugs"
+      },
+      "master_sheet_path": "webnovel_assets/characters/curly_boy_master_sheet.jpg"
+    },
+    {
+      "character_id": "tapori_driver",
+      "name": "The Brazen Tapori Driver",
+      "age": 28,
+      "archetype": "Cheeky Syndicate Courier / Comic Badass",
+      "physical_anchors": {
+        "facial_features": "Irreverent cocky smirk, chewing gum/paan, gold hoop earring in one ear, wavy textured hair",
+        "physique": "Streetwise, relaxed, casual swagger"
+      },
+      "attire": {
+        "primary": "Colorful tropical floral print half-sleeve shirt worn open over a white ribbed tank top",
+        "accessories": "Red patterned gamchha scarf tied around neck, brass keychain carabiner, ripped jeans, loafers"
+      },
+      "master_sheet_path": "webnovel_assets/characters/tapori_driver_master_sheet.jpg"
+    },
+    {
+      "character_id": "officers_wife",
+      "name": "The Young Officer's Wife (Name Unrevealed)",
+      "age": 26,
+      "archetype": "Compassionate Young Officer's Wife / Former Academy Friend's Spouse",
+      "backstory_connection": "Wife of the newly appointed young Inspector (early 30s) currently visiting the Commissioner, who was Rahul's elder brother's close friend and comrade from their NDRF / police academy days.",
+      "physical_anchors": {
+        "hair": "Silky dark brown hair styled in a graceful, loose low bun with soft tendrils framing her cheeks and neck",
+        "facial_features": "Exceptionally beautiful Korean manhwa heroine facial structure, expressive amber-brown doe eyes with delicate long eyelashes, soft blush, gentle tear-glistening expression of heartfelt empathy",
+        "physique": "Slender, feminine, graceful build with dignified poise"
+      },
+      "attire": {
+        "primary": "Handloom cotton-silk saree in ivory-cream with a rich crimson-maroon border, modest fitted blouse",
+        "accessories": "Delicate gold mangalsutra necklace, small gold stud earrings, single thin gold bangle on right wrist"
+      },
+      "master_sheet_path": "webnovel_assets/characters/officers_wife_master_sheet.jpg"
+    },
+    {
+      "character_id": "dig_police",
+      "name": "D.I.G. (Deputy Inspector General of Police)",
+      "age": 52,
+      "archetype": "Compromised Senior Police Commander / Trapped Bureaucrat",
+      "narrative_role": "Senior commanding police officer on the bridge during the contraband interception. Paralyzed by fear between central government pressure and Dynamite Anna's overwhelming political reach.",
+      "physical_anchors": {
+        "hair": "Thinning salt-and-pepper hair, slicked down and plastered across his forehead by rain",
+        "facial_features": "Tense lined forehead, heavy sagging eye bags, greying trimmed mustache, wide anxious eyes with visible sweat beads trickling down cheeks",
+        "physique": "Stocky, slightly thickset middle-aged build of a seasoned desk commander thrust into the field"
+      },
+      "attire": {
+        "primary": "Dark khaki-olive Indian Police Service field uniform with shoulder epaulettes bearing national crest and stars",
+        "outerwear": "Open dark charcoal/black hooded tactical waterproof police raincoat dripping with monsoon rain",
+        "accessories": "Black leather duty belt with silver buckle and holster, brass rank collar pins"
+      },
+      "key_action_anchors": {
+        "standoff_panic": "Sweating profusely in monsoon rain, trembling hands desperately reaching out to push down Sub-Inspector Raunak's service pistol to prevent Anna's assassination",
+        "voice_plea": "Nervous, shaky voice warning Anna about central orders and international pressure"
+      },
+      "master_sheet_path": "webnovel_assets/characters/dig_master_sheet.jpg"
+    }
+  ],
+  "environments": [
+    {
+      "environment_id": "anna_haveli",
+      "name": "Dynamite Anna's Haveli Fortress",
+      "type": "Cantonment Heritage Palace",
+      "visual_anchors": "Grand decaying heritage estate mansion, stone arches, jharokha balconies, fortified with high razor-wire perimeter walls, armed mercenaries patrolling battlements with assault rifles, black luxury sedans on rain-soaked courtyard, harsh yellow sodium floodlights",
+      "master_sheet_path": "webnovel_assets/environments/anna_haveli_fortress.jpg"
+    },
+    {
+      "environment_id": "rahul_apartment",
+      "name": "Rahul's 1st-Floor Isolated Glass Apartment",
+      "type": "Surveillance Fishbowl",
+      "visual_anchors": "Elevated 1st floor room with full floor-to-ceiling glass sliding doors opening to a balcony with black railing. Outside is an isolated, dense dark wild jungle forest with zero neighboring houses under a pale crescent moon. Interior is uncleaned and cluttered with instant food cups, scattered unpaid hospital bills, rumpled mattress on the bare floor, and a wooden desk with a glowing blue laptop",
+      "master_sheet_path": "webnovel_assets/environments/rahul_glass_apartment.jpg"
+    },
+    {
+      "environment_id": "hospital_ward",
+      "name": "Municipal Government Hospital Ward",
+      "type": "Public Hospital General Ward",
+      "visual_anchors": "Dim, overcrowded Indian municipal hospital ward. Peeling mint-teal institutional plaster walls with exposed red brick cracks, buzzing ceiling fluorescent tube light, tall barred hospital window with overcast rainy afternoon light, squeaking green metal cots on wheels with thin striped sheets, round stainless steel bedside stool, IV drip stand with saline bottle and plastic tubing",
+      "master_sheet_path": "webnovel_assets/environments/hospital_ward_master_staging.jpg"
+    },
+    {
+      "environment_id": "commissioner_bungalow_gate",
+      "name": "Commissioner's Bungalow Gate & Street",
+      "type": "Civil Lines Colonial Estate",
+      "visual_anchors": "Towering black wrought-iron gates with spearhead finials and filigree crest, stately whitewashed masonry gate pillars with round stone caps and brass carriage lanterns, police security booth on the left with khaki canvas awning, asphalt road with granite curbs and avenue trees outside, manicured private lawn and white colonial portico inside",
+      "master_sheet_path": "webnovel_assets/environments/commissioner_gate_master_staging.jpg"
+    },
+    {
+      "environment_id": "panopticon_white_chamber",
+      "name": "14 Old Barracks Road — The Panopticon Death Chamber",
+      "type": "Underground Surveillance Death Vault",
+      "visual_anchors": "Sterile windowless concrete vault with stark white walls and overhead industrial fluorescent tubes. Heavy Soviet-era reinforced iron blast door with small 6-inch tinted viewport glass, electronic keypad with glowing crimson red digital countdown clock (01:00:00), hydraulic pistons and manual locking bars. In the center is a brushed metallic interrogation desk with a glowing cyan terminal monitor and office chair. Along the wall stands a steel multi-tier industrial rack containing torture implements (sledgehammer, stun baton, acid carboys). Ceiling has brass pressurized Nox gas vents.",
+      "master_sheet_path": "webnovel_assets/environments/panopticon_white_chamber.jpg"
+    }
+  ]
+}

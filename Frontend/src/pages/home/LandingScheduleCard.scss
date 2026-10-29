@@ -1,0 +1,58 @@
+.landing-schedule-subtle {
+  max-width: 1200px;
+  margin: 12px auto 24px auto;
+  padding: 0 20px;
+
+  .schedule-subtle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+
+  .schedule-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      &.comic-dot {
+        background: #f97316;
+      }
+
+      &.news-dot {
+        background: #10b981;
+      }
+    }
+
+    .label {
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    .time {
+      color: #94a3b8;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.1);
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}

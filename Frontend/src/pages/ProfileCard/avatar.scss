@@ -1,0 +1,398 @@
+/* Profile Page Styling - Glassmorphism, Cinematic Gradients, Tier Glow, and Responsive Grid Layout */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$theme-bg: #07070b;
+$glass-bg: rgba(15, 15, 24, 0.65);
+$glass-border: rgba(255, 255, 255, 0.06);
+$text-primary: #f0f0f5;
+$text-secondary: #9aa0b0;
+$accent-orange: #ff4f00;
+$accent-pink: #d946ef;
+$accent-blue: #06b6d4;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $theme-bg;
+  color: $text-primary;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.profile-page-root {
+  background-color: $theme-bg;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   1. Cinematic Cover Banner & Header Section
+   ───────────────────────────────────────────────────────────────────────────── */
+.profile-banner-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #0b0b13;
+}
+
+.profile-cover-banner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(7, 7, 11, 0.1) 0%,
+      rgba(7, 7, 11, 0.65) 60%,
+      $theme-bg 100%
+    );
+  }
+}
+
+.profile-header-details {
+  display: flex;
+  position: relative;
+  margin-top: -100px;
+  z-index: 10;
+  padding: 0 15px 25px 15px;
+  align-items: flex-end;
+  gap: 30px;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -80px;
+    gap: 20px;
+  }
+}
+
+/* Avatar & Custom Tier Border Glows */
+.profile-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-glow-ring {
+  padding: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+
+  .profile-main-avatar {
+    border: 3px solid rgba(10, 10, 15, 0.95);
+    background-color: #12121e;
+  }
+
+  /* Glow Animation Rules based on Tier Level */
+  &.level-tier-1 {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3), inset 0 0 10px rgba(6, 182, 212, 0.2);
+    background: linear-gradient(135deg, $accent-blue, #0891b2);
+  }
+
+  &.level-tier-2, &.level-tier-3 {
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+    background: linear-gradient(135deg, $accent-pink, #c084fc);
+    animation: neon-sweep 4s linear infinite;
+  }
+
+  &.level-tier-4, &.level-tier-5 {
+    box-shadow: 0 0 25px rgba(255, 79, 0, 0.5);
+    background: linear-gradient(135deg, $accent-orange, #f97316);
+    animation: neon-sweep 3s linear infinite;
+  }
+
+  &.level-tier-6 { // Level 5+ Fiery Legend state
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.7), 0 0 50px rgba(245, 158, 11, 0.3);
+    background: linear-gradient(135deg, #ef4444, #f59e0b, #ef4444);
+    background-size: 200% 200%;
+    animation: gold-glow 2.5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes neon-sweep {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes gold-glow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.change-avatar-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $accent-orange;
+  border: 2px solid #07070b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: #e03e00;
+    transform: scale(1.1);
+  }
+}
+
+/* Profile Text Metadata */
+.profile-text-meta {
+  flex-grow: 1;
+
+  .name-level-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 4px;
+
+    @media (max-width: 991px) {
+      justify-content: center;
+    }
+  }
+
+  .profile-fullname {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+    color: #fff;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .profile-level-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .profile-username {
+    font-size: 16px;
+    color: $accent-orange;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+  }
+
+  .profile-job-role {
+    font-size: 14px;
+    color: $text-secondary;
+    margin: 0 0 16px 0;
+  }
+}
+
+/* Creator Stats strip */
+.profile-stats-strip {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+
+  @media (max-width: 991px) {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .stat-box {
+    display: flex;
+    flex-direction: column;
+
+    .stat-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .stat-lbl {
+      font-size: 12px;
+      color: $text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+  }
+}
+
+/* Actions buttons */
+.profile-header-actions {
+  display: flex;
+  gap: 12px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+
+  @media (max-width: 991px) {
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .action-btn {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    height: auto !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+    outline: none;
+
+    &.follow-btn {
+      background: $accent-blue;
+      color: #07070b;
+
+      &:hover {
+        background: lighten($accent-blue, 8%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+      }
+
+      &.following {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: #fff;
+
+        &:hover {
+          background: rgba(255, 0, 0, 0.15);
+          border-color: rgba(255, 0, 0, 0.3);
+          color: #ef4444;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.enquiry-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+      }
+    }
+
+    &.support-btn {
+      background: $accent-orange;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(255, 79, 0, 0.35);
+
+      &:hover {
+        background: lighten($accent-orange, 6%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(255, 79, 0, 0.5);
+      }
+    }
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   2. Responsive Grid Layout & Glassmorphic Cards
+   ───────────────────────────────────────────────────────────────────────────── */
+.profile-grid-layout {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: start;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Glassmorphism Design Token */
+.glass-card {
+  background: $glass-bg;
+  backdrop-filter: blur(14px);
+  border: 1px solid $glass-border;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Cards Headers */
+.sidebar-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: $accent-orange;
+    border-radius: 2px;
+  }
+}
+
+/* Tab container custom glass card overrides */
+.main-tabs-card {
+  padding: 20px;
+
+  // React Tabs internal custom alignment override if needed
+  .ant-tabs {
+    color: $text-secondary;
+  }
+}
+
+/* Rewards Radar Chart container styling */
+.radar-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Ensure default ant designs collapse with modern styling */
+.ant-avatar {
+  background-color: #12121e !important;
+  color: #555 !important;
+}
+
+.profile-main-avatar {
+  .ant-avatar-string {
+    font-size: 24px;
+  }
+}

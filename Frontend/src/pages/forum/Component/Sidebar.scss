@@ -1,0 +1,113 @@
+.sidebar {
+  width: 240px;
+  background-color: #12131a;
+  padding: 16px 12px;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+  z-index: 100;
+
+  .sidebar-section {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .sidebar-header-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      margin-bottom: 8px;
+      padding-left: 10px;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+
+      .icon {
+        flex-shrink: 0;
+        transition: transform 0.2s ease, color 0.2s ease;
+      }
+
+      .icon-forum { color: #f97316; }
+      .icon-comics { color: #3b82f6; }
+      .icon-news { color: #eab308; }
+      .icon-create { color: #ec4899; }
+      .icon-library { color: #10b981; }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+        color: #ffffff;
+        transform: translateX(3px);
+
+        .icon {
+          transform: scale(1.15);
+        }
+      }
+
+      &.active {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(249, 115, 22, 0.12) 100%);
+        border: 1px solid rgba(239, 68, 68, 0.35);
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #12131a;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &.closed {
+    transform: translateX(-100%);
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 10px;
+
+  .icon {
+    color: #cbd5e1;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  .sidebar-container {
+    transform: translateX(-100%);
+  }
+}
